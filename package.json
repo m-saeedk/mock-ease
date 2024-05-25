@@ -1,6 +1,6 @@
 {
   "name": "mock-ease",
-  "version": "1.0.0",
+  "version": "0.0.1-alpha",
   "description": "The Simplest Way to Mock APIs",
   "private": false,
   "main": "lib/index.js",
