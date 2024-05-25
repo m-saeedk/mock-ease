@@ -1,1 +1,1 @@
-# mock-ease
+# MockEase

@@ -1,0 +1,38 @@
+{
+  "name": "mock-ease",
+  "version": "1.0.0",
+  "description": "The Simplest Way to Mock APIs",
+  "private": false,
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rimraf ./lib && tsc",
+    "start": "npm run build && node lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "Mock",
+    "Mock API",
+    "API",
+    "Faker",
+    "mock-ease"
+  ],
+  "author": "m-saeedk",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.9.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m-saeedk/mock-ease"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "publishConfig": {
+    "@m-saeedk/registry": "https://npm.pkg.github.com/"
+  }
+}
