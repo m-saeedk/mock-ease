@@ -4,18 +4,20 @@ Welcome to **MockEase**! This npm package simplifies the process of creating moc
 
 ## Features  
 -  **Easy Setup**: Get a mock server up and running in minutes. 
+-  **Simple API**: Create, Read, Update, Delete, and Patch routes.
 -  **CRUD Operations**: Easily bind routes for Create, Read, Update, Delete, and Patch operations. 
 -  **Authentication**: Simple middleware for handling authorization. 
 -  **Route Prefixing**: Organize your routes with customizable prefixes. 
+-  **Delay**: Add a response delay to all routes.
 -  **Extensive Logging**: Automatically log all registered routes for easy debugging. 
 
 ## Installation 
 To install MockEase, 
 use npm or yarn: 
 ``` bash 
-bash npm install mock-ease 
-# or yarn 
-add mock-ease
+npm install mock-ease 
+# or 
+yarn add mock-ease
 ```
 
  ## Quick Start
@@ -58,49 +60,61 @@ Sets a prefix for all routes.
 
 -   `prefix`: The prefix to be added to all routes.
 
-#### BindCrudRoutes(moduleName: string, schema: () => { [key: string]: any }, maxResults?: number)
+#### SetDelay(delay: number)
+
+Sets a response delay for all routes. The delay to be provided is in milliseconds.
+
+-   `delay`: The delay to be added to all routes.
+
+#### BindCrudRoutes(moduleName: string, schema: () => { [key: string]: any }, maxResults?: number, delay?: number)
 
 Binds standard CRUD routes (GET, POST, PUT, DELETE, PATCH) for a given module.
 
 -   `moduleName`: The name of the module.
 -   `schema`: A function that returns the response schema for the module.
 -   `maxResults`: Optional. The maximum number of results to return for GET requests.
+-   `delay`: Optional. The delay to be added to all routes.
 
-#### BindNewGETRoute(route: string, responseSchema: () => { [key: string]: any }, maxResults?: number)
+#### BindNewGETRoute(route: string, responseSchema: () => { [key: string]: any }, maxResults?: number, delay?: number)
 
 Binds a new GET route.
 
 -   `route`: The route path.
 -   `responseSchema`: A function that returns the response schema.
 -   `maxResults`: Optional. The maximum number of results to return.
+-   `delay`: Optional. The delay to be added to all routes.
 
-#### BindNewPOSTRoute(route: string, responseSchema: () => { [key: string]: any })
+#### BindNewPOSTRoute(route: string, responseSchema: () => { [key: string]: any }, delay?: number)
 
 Binds a new POST route.
 
 -   `route`: The route path.
 -   `responseSchema`: A function that returns the response schema.
+-   `delay`: Optional. The delay to be added to all routes.
 
-#### BindNewPUTRoute(route: string, responseSchema: () => { [key: string]: any })
+#### BindNewPUTRoute(route: string, responseSchema: () => { [key: string]: any }, delay?: number)
 
 Binds a new PUT route.
 
 -   `route`: The route path.
 -   `responseSchema`: A function that returns the response schema.
+-   `delay`: Optional. The delay to be added to all routes.
 
-#### BindNewDELETERoute(route: string, responseSchema: () => { [key: string]: any })
+#### BindNewDELETERoute(route: string, responseSchema: () => { [key: string]: any }, delay?: number)
 
 Binds a new DELETE route.
 
 -   `route`: The route path.
 -   `responseSchema`: A function that returns the response schema.
+-   `delay`: Optional. The delay to be added to all routes.
 
-#### BindNewPATCHRoute(route: string, responseSchema: () => { [key: string]: any })
+#### BindNewPATCHRoute(route: string, responseSchema: () => { [key: string]: any }, delay?: number)
 
 Binds a new PATCH route.
 
 -   `route`: The route path.
 -   `responseSchema`: A function that returns the response schema.
+-   `delay`: Optional. The delay to be added to all routes.
 
 #### Start(port: number = 3005)
 

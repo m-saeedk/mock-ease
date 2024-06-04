@@ -1,6 +1,6 @@
 {
   "name": "mock-ease",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The Simplest Way to Mock APIs",
   "private": false,
   "main": "lib/index.js",
@@ -14,7 +14,8 @@
     "Mock API",
     "API",
     "Faker",
-    "mock-ease"
+    "mock-ease",
+    "Express"
   ],
   "author": "m-saeedk",
   "license": "MIT",
